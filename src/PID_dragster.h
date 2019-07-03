@@ -19,6 +19,9 @@ public:
     void setTunings(double proporcional, double integral, double differencial);
     void setOutputLimits(double min, double max);
 
+    void SetTunings(double prop, double integr, double diff); // deprecated
+    void SetOutputLimits(double min, double max); // deprecated
+
     void compute(double deviation);
 
 private:

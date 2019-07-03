@@ -44,3 +44,13 @@ void PID::compute(double deviation) {
 double PID::clamp(double source, double min, double max) {
     return (source < min) ? min : ((source > max) ? max : source);
 }
+
+/* deprecated, rear compatibility only: */
+
+void PID::SetTunings(double prop, double integr, double diff) {
+    setTunings(prop, integr, diff);
+}
+
+void PID::SetOutputLimits(double min, double max) {
+    setOutputLimits(min, max);
+}
