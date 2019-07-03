@@ -45,7 +45,7 @@ double PID::clamp(double source, double min, double max) {
     return (source < min) ? min : ((source > max) ? max : source);
 }
 
-/* deprecated, rear compatibility only: */
+/* deprecated, backward compatibility only: */
 
 void PID::SetTunings(double prop, double integr, double diff) {
     setTunings(prop, integr, diff);
