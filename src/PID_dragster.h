@@ -16,8 +16,8 @@ class PID {
 public:
     PID(double* result, double proporcional, double integral, double differencial);
 
-    void SetTunings(double proporcional, double integral, double differencial);
-    void SetOutputLimits(double min, double max);
+    void setTunings(double proporcional, double integral, double differencial);
+    void setOutputLimits(double min, double max);
 
     void compute(double deviation);
 

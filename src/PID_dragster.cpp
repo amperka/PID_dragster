@@ -21,13 +21,13 @@ PID::PID(double* result, double proporcional, double integral, double differenci
     limitMax = 1.1;
 }
 
-void PID::SetTunings(double proporcional, double integral, double differencial) {
+void PID::setTunings(double proporcional, double integral, double differencial) {
     kp = proporcional;
     ki = integral;
     kd = differencial;
 }
 
-void PID::SetOutputLimits(double min, double max) {
+void PID::setOutputLimits(double min, double max) {
     limitMin = min;
     limitMax = max;
 }
