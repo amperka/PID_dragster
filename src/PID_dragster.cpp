@@ -11,34 +11,34 @@
 #include "PID_dragster.h"
 
 PID::PID(double* result, double proporcional, double integral, double differencial) {
-    kp = proporcional;
-    ki = integral;
-    kd = differencial * 10;
-    previouse = 0.0;
-    accumulated = 0.0;
-    output = result;
-    limitMin = -1.1;
-    limitMax = 1.1;
+    _kp = proporcional;
+    _ki = integral;
+    _kd = differencial * 10;
+    _previouse = 0.0;
+    _accumulated = 0.0;
+    _output = result;
+    _limitMin = -1.1;
+    _limitMax = 1.1;
 }
 
 void PID::setTunings(double proporcional, double integral, double differencial) {
-    kp = proporcional;
-    ki = integral;
-    kd = differencial;
+    _kp = proporcional;
+    _ki = integral;
+    _kd = differencial;
 }
 
 void PID::setOutputLimits(double min, double max) {
-    limitMin = min;
-    limitMax = max;
+    _limitMin = min;
+    _limitMax = max;
 }
 
 void PID::compute(double deviation) {
-    double p = kp * deviation; // proporcional reaction
-    double i = ki * accumulated; // one-step integral reaction
-    double d = kd * (deviation - previouse); // one-step differencial reaction
-    previouse = deviation;
-    accumulated = (7 * accumulated + deviation) / 8; // integration
-    *output = -clamp(p + i + d, limitMin, limitMax); // reregulation supression
+    double p = _kp * deviation; // proporcional reaction
+    double i = _ki * _accumulated; // one-step integral reaction
+    double d = _kd * (deviation - _previouse); // one-step differencial reaction
+    _previouse = deviation;
+    _accumulated = (7 * _accumulated + deviation) / 8; // integration
+    *_output = -clamp(p + i + d, _limitMin, _limitMax); // reregulation supression
 }
 
 double PID::clamp(double source, double min, double max) {

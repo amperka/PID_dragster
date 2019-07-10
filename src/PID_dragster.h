@@ -27,16 +27,16 @@ public:
 private:
     double clamp(double source, double min, double max);
 
-    double kp; // Proportional parameter
-    double ki; // Integral parameter
-    double kd; // Differencial parameter
+    double _kp; // Proportional parameter
+    double _ki; // Integral parameter
+    double _kd; // Differencial parameter
 
-    double previouse; // previouse step deviation value
-    double accumulated; // accumulated deviation
+    double _previouse; // previouse step deviation value
+    double _accumulated; // accumulated deviation
 
-    double* output;
+    double* _output;
 
-    double limitMin, limitMax; // clamp limits
+    double _limitMin, _limitMax; // clamp limits
 };
 
 #endif //__PID_DRAGSTER_H__
