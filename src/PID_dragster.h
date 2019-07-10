@@ -36,7 +36,7 @@ private:
 
     double* _output;
 
-    double _limitMin, limitMax; // clamp limits
+    double _limitMin, _limitMax; // clamp limits
 };
 
 #endif //__PID_DRAGSTER_H__
