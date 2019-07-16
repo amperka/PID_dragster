@@ -2,7 +2,7 @@
  * This file is a part of Dragster car set library.
  *
  * Defines: simple PID-regulator for Dragster 
- * � Amperka LLC (https://amperka.com, dev@amperka.com)
+ * © Amperka LLC (https://amperka.com, dev@amperka.com)
  * 
  * Author: Yury Botov <by@amperka.com>
  * License: GPLv3, all text here must be included in any redistribution.
