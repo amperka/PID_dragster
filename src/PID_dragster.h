@@ -8,7 +8,6 @@
  * License: GPLv3, all text here must be included in any redistribution.
  */
 
-
 #ifndef __PID_DRAGSTER_H__
 #define __PID_DRAGSTER_H__
 

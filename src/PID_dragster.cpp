@@ -8,7 +8,6 @@
  * License: GPLv3, all text here must be included in any redistribution.
  */
 
-
 #include "PID_dragster.h"
 
 PID::PID(double* result, double proporcional, double integral, double differencial) {
