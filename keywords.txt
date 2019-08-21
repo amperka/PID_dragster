@@ -13,6 +13,8 @@ PID			KEYWORD1
 #######################################
 
 compute			KEYWORD2
+setOutputLimits		KEYWORD2
+setTunings		KEYWORD2
 SetOutputLimits		KEYWORD2
 SetTunings		KEYWORD2
 
